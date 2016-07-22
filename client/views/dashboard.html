@@ -1,0 +1,65 @@
+<!--
+<div>
+    <a href="#activeChat" ng-repeat="contact in contacts" ng-click="setActiveChat(contact);">
+        <li class="contactslist">
+            <img src="{{contact.image}}" class="contactsImg" />
+            <span>{{contact.name}}</span>
+        </li>
+    </a>
+</div>-->
+<div class="">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <span class="glyphicon glyphicon-comment"></span> Chat
+                    <div class="btn-group pull-right">
+                        <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </button>
+                        <ul class="dropdown-menu slidedown">
+                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-refresh">
+                            </span>Refresh</a></li>
+                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-ok-sign">
+                            </span>Available</a></li>
+                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-remove">
+                            </span>Busy</a></li>
+                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-time"></span>
+                                Away</a></li>
+                            <li class="divider"></li>
+                            <li><a href="http://www.jquery2dotnet.com"><span class="glyphicon glyphicon-off"></span>
+                                Sign Out</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="panel-body" style="min-height:{{windowDimensions.height-150}}px">
+                    <ul class="chat">
+
+                        <a href="#activeChat" ng-repeat="contact in contacts" ng-click="setActiveChat(contact);">
+<!--
+                            <li class="contactslist">
+                                <img src="{{contact.image}}" class="contactsImg" />
+                                <span>{{contact.name}}</span>
+                            </li>
+-->
+                            <li class="left clearfix">
+                                <span class="chat-img pull-left">
+                                    <img src="{{contact.image}}" alt="User Avatar" class="img-circle" style="width: 100px;height: 60px;">
+                                </span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <strong class="primary-font">{{contact.name}}</strong> <small class="pull-right text-muted">
+                                        <span class="glyphicon glyphicon-time"></span>12 mins ago</small>
+                                    </div>
+                                    <p>
+                                        {{contact.status}} || what's up
+                                    </p>
+                                </div>
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

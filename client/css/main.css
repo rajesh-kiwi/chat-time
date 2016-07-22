@@ -1,0 +1,31 @@
+.contactslist {
+    margin: 5px 0px;
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    border: 1px solid rgb(163, 221, 157);
+}
+
+.contactsImg {
+    width: 3%;
+}
+
+.conversationBody {
+    background-image: url('../images/chat-background.png');
+}
+
+.conversationDiv {
+    padding: 0.2% 0% 5% 1%;
+    overflow-y: scroll;
+    margin: auto;
+}
+
+.messageContent {
+    background-color: bisque;
+    width: -moz-max-content;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.margin5 {
+    margin: 5px;
+}
