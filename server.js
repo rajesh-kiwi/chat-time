@@ -103,6 +103,11 @@ app.get('/', function (req, res) {
     res.send('chatinggg time');
 });
 
-http.listen(4000, function () {
-    console.log('listening on *:4000');
+var ngrok = require('ngrok');
+ngrok.connect(4000, function (err, url) {
+    console.log(url)
+});
+
+http.listen(8080, function () {
+    console.log('listening on *:8080');
 });

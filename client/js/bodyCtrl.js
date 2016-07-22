@@ -23,9 +23,13 @@ app.controller('bodyCtrl', function ($scope, $location) {
     $scope.setActiveChat = function (contact) {
         $scope.activeConversation = contact;
         if ($scope.localDB[contact.contactNumber]) {
-            $scope.localDB[contact.contactNumber].forEach(function (incomingMessageDetails) {
+            $scope.localDB[contact.contactNumber].forEach(function (messageDetails) {
                 setTimeout(function () {
-                    $scope.appendIncomingMessage(incomingMessageDetails);
+                    if (messageDetails.type == "incoming") {
+                        $scope.appendIncomingMessage(messageDetails);
+                    } else {
+                        $scope.appendOutgoingMessage(messageDetails);
+                    }
                 }, 1000);
             });
         }
