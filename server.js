@@ -15,7 +15,7 @@ app.use(function (req, res, next) {
 });
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || 'localhost';
-var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
 
 function contactObj(name, contactNumber) {
     this.name = name;
