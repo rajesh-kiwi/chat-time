@@ -31,5 +31,5 @@ app.directive('fileModel', ['$parse', function ($parse) {
     };
 }]);
 
-var socket = io.connect('http://localhost:8080');
+var socket = io.connect('http://localhost:3000');
 //var socket = io.connect('https://e0d8e04d.ngrok.io');

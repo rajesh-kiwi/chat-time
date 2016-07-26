@@ -16,6 +16,7 @@ app.use(function (req, res, next) {
 
 var ipaddress = process.env.OPENSHIFT_NODEJS_IP || 'localhost';
 var port = process.env.OPENSHIFT_NODEJS_PORT || 3000;
+process.env.PORT = 3000;
 
 function contactObj(name, contactNumber) {
     this.name = name;
@@ -114,8 +115,8 @@ app.get('/', function (req, res) {
 //    console.log(url)
 //});
 
-http.listen(port, function () {
-    console.log('listening on *:'+port);
+http.listen(process.env.PORT || 4000, function () {
+    console.log('listening on *: '+process.env.PORT || 4000);
 });
 
 
