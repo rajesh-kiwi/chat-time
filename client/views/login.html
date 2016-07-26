@@ -37,15 +37,16 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    <div class="input-group" style="margin: auto;">
-                        <input id="btn-input" type="text" class="form-control input-sm margin5" ng-model="credentials.name" placeholder="Enter your name here...">
+                    <form name="userRegisterForm" ng-submit="userRegisterForm.$valid && register()">
+                        <div class="input-group" style="margin: auto;">
+                            <input id="btn-input" type="text" class="form-control input-sm margin5" ng-model="credentials.name" placeholder="Enter your name here..." required>
 
-                        <input id="btn-input" type="text" class="form-control input-sm margin5" ng-model="credentials.contactNumber" placeholder="Enter your mobile number here...">
-                    </div>
-                    <div class="input-group" style="margin: auto;">
-                        <button class="btn btn-warning btn-sm margin5" id="btn-chat" ng-click="register();">
-                            Register</button>
-                    </div>
+                            <input id="btn-input" type="text" class="form-control input-sm margin5" ng-pattern="/^\d{10}$/" ng-model="credentials.contactNumber" placeholder="Enter your mobile number here..." required>
+                        </div>
+                        <div class="input-group" style="margin: auto;">
+                            <button class="btn btn-warning btn-sm margin5" id="btn-chat" type="submit">Register</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

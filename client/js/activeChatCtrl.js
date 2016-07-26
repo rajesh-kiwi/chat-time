@@ -8,6 +8,8 @@ app.controller('activeChatCtrl', function ($scope, $http) {
             return;
         var payload = angular.copy($scope.payload);
         socket.emit('sendMessage', JSON.stringify(payload));
+        var convDiv = document.getElementById($scope.activeConversation.contactNumber+'-conversationDiv');
+        convDiv.scrollTop = convDiv.scrollHeight;
         payload.type = 'outgoing';
         $scope.appendOutgoingMessage(payload);
         $scope.storeInLocalDB(payload);
